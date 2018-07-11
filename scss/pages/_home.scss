@@ -4,7 +4,7 @@
   grid-gap: 20px;
 }
 
-.movie {
+.list__item {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,11 @@
   padding: 10px;
 }
 
-.favorite--active {
+.list__item--active {
   background-color: gold;
   // border: 3px solid yellow;
+}
+
+.list__item-title {
+  font-family: 'Gaegu', sans-serif;
 }
