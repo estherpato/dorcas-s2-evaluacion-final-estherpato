@@ -1,5 +1,4 @@
 .title {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
   font-weight: 700;
   font-size: 50px;
   color: white;
@@ -9,6 +8,7 @@
 }
 
 .input {
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
   border-bottom: 2px solid white;
   height: 30px;
   width: 300px;
@@ -20,14 +20,17 @@
 input::-webkit-input-placeholder {
   color: #F1F1F1;
   font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 input:-moz-placeholder {
   color: #F1F1F1;
   font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 input:-ms-input-placeholder {
   color: #F1F1F1;
   font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 
 .search__container {
@@ -58,7 +61,6 @@ input:-ms-input-placeholder {
 }
 
 .list__item-title {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
   color: white;
   text-align: center;
 }

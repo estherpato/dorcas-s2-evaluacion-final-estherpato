@@ -10,7 +10,7 @@ body {
   background-image: linear-gradient(to right, #c31432, #240b36);
   min-height: 100vh;
   width: 100%;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 
 input {
@@ -21,7 +21,6 @@ input {
 }
 
 .title {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
   font-weight: 700;
   font-size: 50px;
   color: white;
@@ -31,6 +30,7 @@ input {
 }
 
 .input {
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
   border-bottom: 2px solid white;
   height: 30px;
   width: 300px;
@@ -42,16 +42,19 @@ input {
 input::-webkit-input-placeholder {
   color: #F1F1F1;
   font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 
 input:-moz-placeholder {
   color: #F1F1F1;
   font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 
 input:-ms-input-placeholder {
   color: #F1F1F1;
   font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 
 .search__container {
@@ -99,9 +102,37 @@ input:-ms-input-placeholder {
 }
 
 .list__item-title {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
   color: white;
   text-align: center;
+}
+
+.button {
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 40px;
+  width: 200px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #53BF44;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: white;
+  color: #2D1239;
+  -webkit-transition: background-color ease-in 2s, color ease 1s;
+  transition: background-color ease-in 2s, color ease 1s;
 }
 
 /*# sourceMappingURL=main.css.map */
