@@ -9,6 +9,7 @@ var list = document.querySelector('#list')
 var userSearch;
 var searchResult;
 var newItem;
+var newTitle;
 var newName;
 var newIMG;
 var newURL;
@@ -35,7 +36,11 @@ function requestFilms() {
         newItem = document.createElement('li');
         newItem.classList.add('movie');
         newItem.addEventListener('click', favorite);
+
+        newTitle = document.createElement('h2');
+        newTitle.classList.add('title');
         newName = document.createTextNode(searchResult[i].show.name);
+
         newIMG = document.createElement('img');
         newURL = searchResult[i].show.image;
 
@@ -47,7 +52,8 @@ function requestFilms() {
         }
 
         // lógica para imprimir la lista en html
-        newItem.appendChild(newName);
+        newTitle.appendChild(newName);
+        newItem.appendChild(newTitle);
         newItem.appendChild(newIMG);
         list.appendChild(newItem);
       }
