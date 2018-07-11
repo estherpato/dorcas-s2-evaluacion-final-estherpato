@@ -1,1 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  background-image: linear-gradient(#c31432, #240b36); 
+  min-height: 100vh;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
