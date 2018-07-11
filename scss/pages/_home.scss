@@ -1,5 +1,6 @@
 .list {
-background-color: red;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .favorite--active {

@@ -33,7 +33,7 @@ function requestFilms() {
       // bucle para entrar en el array
       for (var i = 0; i < searchResult.length; i++) {
         newItem = document.createElement('li');
-        newItem.classList.add('list');
+        newItem.classList.add('movie');
         newItem.addEventListener('click', favorite);
         newName = document.createTextNode(searchResult[i].show.name);
         newIMG = document.createElement('img');
@@ -43,7 +43,7 @@ function requestFilms() {
         if (newURL !== null) {
           newIMG.setAttribute('src', newURL.medium);
         } else if (newURL === null) {
-          newIMG.setAttribute('src', 'https://via.placeholder.com/210x295/cccccc/666666/?text=NOPE :)');
+          newIMG.setAttribute('src', 'https://via.placeholder.com/210x295/cccccc/666666/?text=NO PIC :)');
         }
 
         // lógica para imprimir la lista en html
@@ -56,7 +56,12 @@ function requestFilms() {
 
 function favorite(event) {
   var myFilm = event.currentTarget;
-  myFilm.classList.add('favorite--active');
+
+  if (myFilm.classList.contains('favorite--active')) {
+    myFilm.classList.remove('favorite--active');
+  } else {
+    myFilm.classList.add('favorite--active');
+  }
 }
 
 button.addEventListener('click', requestFilms);
