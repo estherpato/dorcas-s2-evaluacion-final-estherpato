@@ -1,2 +1,23 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.list {
+  background-color: red;
+}
+
+.favorite--active {
+  background-color: yellow;
+  padding: 50px;
+}
 
 /*# sourceMappingURL=main.css.map */
