@@ -17,6 +17,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border: 0;
 }
 
 .title {
@@ -31,6 +32,26 @@ input {
 
 .input {
   border-bottom: 2px solid white;
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+
+input::-webkit-input-placeholder {
+  color: #F1F1F1;
+  font-size: 20px;
+}
+
+input:-moz-placeholder {
+  color: #F1F1F1;
+  font-size: 20px;
+}
+
+input:-ms-input-placeholder {
+  color: #F1F1F1;
+  font-size: 20px;
 }
 
 .search__container {
