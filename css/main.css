@@ -6,18 +6,54 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#c31432), to(#240b36));
-  background-image: linear-gradient(#c31432, #240b36);
+  background-image: -webkit-gradient(linear, left top, right top, from(#c31432), to(#240b36));
+  background-image: linear-gradient(to right, #c31432, #240b36);
   min-height: 100vh;
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.title {
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input {
+  border-bottom: 2px solid white;
+}
+
+.search__container {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
-  grid-auto-flow: row;
 }
 
 .list__item {
@@ -43,6 +79,8 @@ body {
 
 .list__item-title {
   font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  color: white;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
