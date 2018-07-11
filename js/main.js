@@ -64,10 +64,10 @@ function requestFilms() {
 function favorite(event) {
   myFilm = event.currentTarget;
 
-  if (myFilm.classList.contains('list__item--active')) {
-    myFilm.classList.remove('list__item--active');
+  if (myFilm.classList.contains('list__item--fav')) {
+    myFilm.classList.remove('list__item--fav');
   } else {
-    myFilm.classList.add('list__item--active');
+    myFilm.classList.add('list__item--fav');
   }
 }
 

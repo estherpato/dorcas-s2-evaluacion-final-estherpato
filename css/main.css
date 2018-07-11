@@ -17,6 +17,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  grid-auto-flow: row;
 }
 
 .list__item {
@@ -34,12 +35,14 @@ body {
   padding: 10px;
 }
 
-.list__item--active {
-  background-color: gold;
+.list__item--fav {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(orange), to(#ffc500));
+  background-image: linear-gradient(orange, #ffc500);
+  border: 1px solid white;
 }
 
 .list__item-title {
-  font-family: 'Gaegu', sans-serif;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */
