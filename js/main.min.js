@@ -54,8 +54,9 @@ function requestFilms() {
     });
 }
 
+// función para definir la lógica de los favoritos
 function favorite(event) {
-  var myFilm = event.currentTarget;
+  myFilm = event.currentTarget;
 
   if (myFilm.classList.contains('favorite--active')) {
     myFilm.classList.remove('favorite--active');

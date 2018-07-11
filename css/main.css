@@ -6,22 +6,36 @@
 }
 
 body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c31432), to(#240b36));
+  background-image: linear-gradient(#c31432, #240b36);
   min-height: 100vh;
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.movie {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .favorite--active {
-  background-color: yellow;
-  padding: 50px;
+  background-color: gold;
 }
 
 /*# sourceMappingURL=main.css.map */
