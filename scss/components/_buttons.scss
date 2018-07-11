@@ -8,14 +8,15 @@
   width: 200px;
   border: 0;
   border-radius: 15px;
-  background-color: #53BF44;
+  background-color: #51BF3E;
   color: white;
   font-size: 20px;
+  font-weight: 700;
   text-transform: uppercase;
 
   &:hover {
-  background-color: white;
-  color: #2D1239;
-  transition: background-color ease-in 2s, color ease 1s;
+  background-color: #FCF47F;
+  color: #222222;
+  transition: background-color ease-in 1s, color ease 1s;
   }
 }

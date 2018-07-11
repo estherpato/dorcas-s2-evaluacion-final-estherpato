@@ -9,7 +9,7 @@
 
 .input {
   font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #51BF3E;
   height: 30px;
   width: 300px;
   background-color: transparent;
@@ -48,6 +48,7 @@ input:-ms-input-placeholder {
 }
 
 .list__item {
+  background-image: linear-gradient(#b38697, #72005c);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -56,11 +57,39 @@ input:-ms-input-placeholder {
 }
 
 .list__item--fav {
-  background-image: linear-gradient(orange, #ffc500);
-  border: 1px solid white;
+  background-image: linear-gradient(gold, #ffc474);
+  border-radius: 10px;
 }
 
 .list__item-title {
-  color: white;
+  color: #222222;
   text-align: center;
+  position: relative;
+  margin-bottom: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    background-color: #222222;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.list__item-title--fav {
+  color: #222222;
+  transition: color ease 1s;
 }
