@@ -1,22 +1,17 @@
 .button {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  padding: 10px;
   margin-top: 20px;
-  height: 40px;
-  width: 200px;
   border: 0;
-  border-radius: 15px;
-  background-color: #51BF3E;
+  margin-left: 10px;
+  background-color: #AF003B;
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
 
   &:hover {
-  background-color: #FCF47F;
-  color: #222222;
+  background-color: #FCBFCE;
+  color: black;
   transition: background-color ease-in 1s, color ease 1s;
   }
 }

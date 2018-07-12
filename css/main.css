@@ -6,10 +6,10 @@
 }
 
 body {
-  background: #222222;
+  background: white;
   min-height: 100vh;
   width: 100%;
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 input {
@@ -22,38 +22,38 @@ input {
 .title {
   font-weight: 700;
   font-size: 50px;
-  color: white;
+  color: black;
   text-transform: uppercase;
   text-align: center;
   margin-top: 50px;
 }
 
 .input {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
-  border-bottom: 2px solid #51BF3E;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  border-bottom: 1px solid black;
   height: 30px;
   width: 300px;
   background-color: transparent;
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 14px;
 }
 
 input::-webkit-input-placeholder {
-  color: #F1F1F1;
-  font-size: 20px;
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  color: black;
+  font-size: 14px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 input:-moz-placeholder {
-  color: #F1F1F1;
-  font-size: 20px;
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  color: black;
+  font-size: 14px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 input:-ms-input-placeholder {
-  color: #F1F1F1;
-  font-size: 20px;
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  color: black;
+  font-size: 14px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 .search__container {
@@ -61,36 +61,31 @@ input:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
-  margin: 0 20px;
+  margin: 0 100px;
 }
 
 .list__item {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#72005c), to(#b38697));
-  background-image: linear-gradient(#72005c, #b38697);
+  background-color: #F3C2CF;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -98,10 +93,11 @@ input:-ms-input-placeholder {
 }
 
 .list__item-title {
-  color: white;
+  color: #AF003B;
+  font-size: 18px;
   text-align: center;
   position: relative;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .list__item-title::before {
@@ -111,7 +107,7 @@ input:-ms-input-placeholder {
   height: 2px;
   bottom: 2px;
   left: 0;
-  background-color: #51BF3E;
+  background-color: black;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -126,8 +122,8 @@ input:-ms-input-placeholder {
 }
 
 .list__item--fav {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(#ffc474));
-  background-image: linear-gradient(gold, #ffc474);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gold));
+  background-image: linear-gradient(gold);
   border-radius: 10px;
 }
 
@@ -136,31 +132,20 @@ input:-ms-input-placeholder {
 }
 
 .button {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  padding: 10px;
   margin-top: 20px;
-  height: 40px;
-  width: 200px;
   border: 0;
-  border-radius: 15px;
-  background-color: #51BF3E;
+  margin-left: 10px;
+  background-color: #AF003B;
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: #FCF47F;
-  color: #222222;
+  background-color: #FCBFCE;
+  color: black;
   -webkit-transition: background-color ease-in 1s, color ease 1s;
   transition: background-color ease-in 1s, color ease 1s;
 }
