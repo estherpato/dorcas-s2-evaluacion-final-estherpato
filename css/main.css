@@ -73,7 +73,7 @@ input:-ms-input-placeholder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
-  margin: 0 100px;
+  margin: 0 10px;
 }
 
 .list__item {
@@ -148,6 +148,18 @@ input:-ms-input-placeholder {
   color: black;
   -webkit-transition: background-color ease-in 1s, color ease 1s;
   transition: background-color ease-in 1s, color ease 1s;
+}
+
+@media all and (min-width: 768px) {
+  .list {
+    margin: 0 30px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .list {
+    margin: 0 50px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
