@@ -69,21 +69,9 @@ function favorite(event) {
   } else {
     myFilm.classList.add('list__item--fav');
   }
-
-// favoriteTitle();
 }
 
-// function favoriteTitle() {
-//   var myFilmTitle = document.querySelectorAll('.list__item-title');
-//
-//   for(var i = 0; i < myFilmTitle.length; i++) {
-//     // myFilmTitle[i].addEventListener('click', favoriteTitle);
-//     if (myFilm.classList.contains('list__item--fav')) {
-//       myFilmTitle[i].classList.add('list__item-title--fav');
-//     } else {
-//       myFilmTitle[i].classList.remove('list__item-title--fav');
-//     }
-//   }
-// }
-
 button.addEventListener('click', requestFilms);
+
+
+// local storage
