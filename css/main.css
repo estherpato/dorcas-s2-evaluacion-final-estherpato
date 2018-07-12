@@ -77,11 +77,12 @@ input:-ms-input-placeholder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
+  margin: 0 20px;
 }
 
 .list__item {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#b38697), to(#72005c));
-  background-image: linear-gradient(#b38697, #72005c);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#72005c), to(#b38697));
+  background-image: linear-gradient(#72005c, #b38697);
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,14 +97,8 @@ input:-ms-input-placeholder {
   padding: 10px;
 }
 
-.list__item--fav {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(#ffc474));
-  background-image: linear-gradient(gold, #ffc474);
-  border-radius: 10px;
-}
-
 .list__item-title {
-  color: #222222;
+  color: white;
   text-align: center;
   position: relative;
   margin-bottom: 5px;
@@ -116,7 +111,7 @@ input:-ms-input-placeholder {
   height: 2px;
   bottom: 2px;
   left: 0;
-  background-color: #222222;
+  background-color: #51BF3E;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -130,10 +125,14 @@ input:-ms-input-placeholder {
   transform: scaleX(1);
 }
 
-.list__item-title--fav {
+.list__item--fav {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(#ffc474));
+  background-image: linear-gradient(gold, #ffc474);
+  border-radius: 10px;
+}
+
+.list__item--fav .list__item-title {
   color: #222222;
-  -webkit-transition: color ease 1s;
-  transition: color ease 1s;
 }
 
 .button {
