@@ -133,20 +133,10 @@ input:-ms-input-placeholder {
 
 .button {
   font-family: 'Arial', 'Helvetica', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  padding: 10px;
   margin-top: 20px;
-  height: 40px;
-  width: 100px;
   border: 0;
-  border-radius: 15px;
+  margin-left: 10px;
   background-color: #AF003B;
   color: white;
   font-size: 14px;
