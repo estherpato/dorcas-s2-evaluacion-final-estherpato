@@ -2,10 +2,10 @@
 
 // lógica para imprimir título e imagen
 
-var windowBody = document.querySelector('body');
 var button = document.querySelector('#button');
 var input = document.querySelector('#input');
-var list = document.querySelector('#list')
+var list = document.querySelector('#list');
+
 var userSearch;
 var searchResult;
 var newItem;
@@ -19,7 +19,6 @@ var myFilm;
 function requestFilms() {
   // borramos el contenido al hacer nueva búsqueda
   list.innerHTML = '';
-
   // llamamos a la API con nuestra búsqueda
   userSearch = input.value;
   fetch('http://api.tvmaze.com/search/shows?q=' + userSearch)
@@ -27,35 +26,38 @@ function requestFilms() {
       return response.json();
     })
 
-  // Recogemos la búsqueda
+    // Recogemos la búsqueda
     .then(function(json){
       searchResult = json;
+      if (searchResult.length === 0) {
+        alert('Introduce una búsqueda válida (y chachi)');
+      } else {
+        // bucle para entrar en el array
+        for (var i = 0; i < searchResult.length; i++) {
+          newItem = document.createElement('li');
+          newItem.classList.add('list__item');
+          newItem.addEventListener('click', favorite);
 
-      // bucle para entrar en el array
-      for (var i = 0; i < searchResult.length; i++) {
-        newItem = document.createElement('li');
-        newItem.classList.add('list__item');
-        newItem.addEventListener('click', favorite);
+          newTitle = document.createElement('h2');
+          newTitle.classList.add('list__item-title');
+          newName = document.createTextNode(searchResult[i].show.name);
 
-        newTitle = document.createElement('h2');
-        newTitle.classList.add('list__item-title');
-        newName = document.createTextNode(searchResult[i].show.name);
+          newIMG = document.createElement('img');
+          newURL = searchResult[i].show.image;
 
-        newIMG = document.createElement('img');
-        newURL = searchResult[i].show.image;
+          // logica para imprimir las imágenes
+          if (newURL !== null) {
+            newIMG.setAttribute('src', newURL.medium);
+          } else if (newURL === null) {
+            newIMG.setAttribute('src', 'https://via.placeholder.com/210x295/cccccc/666666/?text=NO PIC :)');
+          }
 
-        // logica para imprimir las imágenes
-        if (newURL !== null) {
-          newIMG.setAttribute('src', newURL.medium);
-        } else if (newURL === null) {
-          newIMG.setAttribute('src', 'https://via.placeholder.com/210x295/cccccc/666666/?text=NO PIC :)');
+          // lógica para imprimir la lista en html
+          newTitle.appendChild(newName);
+          newItem.appendChild(newTitle);
+          newItem.appendChild(newIMG);
+          list.appendChild(newItem);
         }
-
-        // lógica para imprimir la lista en html
-        newTitle.appendChild(newName);
-        newItem.appendChild(newTitle);
-        newItem.appendChild(newIMG);
-        list.appendChild(newItem);
       }
     });
 }
@@ -72,3 +74,9 @@ function favorite(event) {
 }
 
 button.addEventListener('click', requestFilms);
+
+// local storage
+
+function saveLocalStorage(input, serie){
+  localStorage.setItem(input, JSON.stringify(serie));
+}

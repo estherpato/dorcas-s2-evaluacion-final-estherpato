@@ -1,0 +1,22 @@
+.button {
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 40px;
+  width: 200px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #51BF3E;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+  background-color: #FCF47F;
+  color: #222222;
+  transition: background-color ease-in 1s, color ease 1s;
+  }
+}

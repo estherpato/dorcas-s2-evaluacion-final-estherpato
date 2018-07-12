@@ -1,11 +1,55 @@
+.title {
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input {
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+  border-bottom: 2px solid #51BF3E;
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+
+input::-webkit-input-placeholder {
+  color: #F1F1F1;
+  font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+}
+input:-moz-placeholder {
+  color: #F1F1F1;
+  font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+}
+input:-ms-input-placeholder {
+  color: #F1F1F1;
+  font-size: 20px;
+  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+}
+
+.search__container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
-  grid-auto-flow: row;
+  margin: 0 20px;
 }
 
 .list__item {
+  background-image: linear-gradient(#72005c, #b38697);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -13,12 +57,39 @@
   padding: 10px;
 }
 
-.list__item--fav {
-  background-image: linear-gradient(orange, #ffc500);
-  border: 1px solid white;
-  // border: 3px solid yellow;
+.list__item-title {
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-bottom: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    background-color: #51BF3E;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
 
-.list__item-title {
-  font-family: 'Gaegu', 'Arial', 'Helvetica', sans-serif;
+.list__item--fav {
+  background-image: linear-gradient(gold, #ffc474);
+  border-radius: 10px;
+
+  .list__item-title {
+    color: #222222;
+  }
 }
