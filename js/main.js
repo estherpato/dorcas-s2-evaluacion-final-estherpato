@@ -77,6 +77,6 @@ button.addEventListener('click', requestFilms);
 
 // local storage
 
-function saveLocalStorage(input, serie){
-  localStorage.setItem(input, JSON.stringify(serie));
+function saveLocalStorage(input, show){
+  localStorage.setItem(input, JSON.stringify(show));
 }
