@@ -15,14 +15,6 @@ var newIMG;
 var newURL;
 var myFilm;
 
-
-function invalidSearch() {
-  if (searchResult.length === 0) {
-    alert('Introduce una búsqueda válida (y chachi)');
-  } else {
-    requestFilms();
-  }
-}
 // función para hacer búsqueda
 function requestFilms() {
   // borramos el contenido al hacer nueva búsqueda
@@ -37,32 +29,35 @@ function requestFilms() {
     // Recogemos la búsqueda
     .then(function(json){
       searchResult = json;
-      invalidSearch();
-      // bucle para entrar en el array
-      for (var i = 0; i < searchResult.length; i++) {
-        newItem = document.createElement('li');
-        newItem.classList.add('list__item');
-        newItem.addEventListener('click', favorite);
+      if (searchResult.length === 0) {
+        alert('Introduce una búsqueda válida (y chachi)');
+      } else {
+        // bucle para entrar en el array
+        for (var i = 0; i < searchResult.length; i++) {
+          newItem = document.createElement('li');
+          newItem.classList.add('list__item');
+          newItem.addEventListener('click', favorite);
 
-        newTitle = document.createElement('h2');
-        newTitle.classList.add('list__item-title');
-        newName = document.createTextNode(searchResult[i].show.name);
+          newTitle = document.createElement('h2');
+          newTitle.classList.add('list__item-title');
+          newName = document.createTextNode(searchResult[i].show.name);
 
-        newIMG = document.createElement('img');
-        newURL = searchResult[i].show.image;
+          newIMG = document.createElement('img');
+          newURL = searchResult[i].show.image;
 
-        // logica para imprimir las imágenes
-        if (newURL !== null) {
-          newIMG.setAttribute('src', newURL.medium);
-        } else if (newURL === null) {
-          newIMG.setAttribute('src', 'https://via.placeholder.com/210x295/cccccc/666666/?text=NO PIC :)');
+          // logica para imprimir las imágenes
+          if (newURL !== null) {
+            newIMG.setAttribute('src', newURL.medium);
+          } else if (newURL === null) {
+            newIMG.setAttribute('src', 'https://via.placeholder.com/210x295/cccccc/666666/?text=NO PIC :)');
+          }
+
+          // lógica para imprimir la lista en html
+          newTitle.appendChild(newName);
+          newItem.appendChild(newTitle);
+          newItem.appendChild(newIMG);
+          list.appendChild(newItem);
         }
-
-        // lógica para imprimir la lista en html
-        newTitle.appendChild(newName);
-        newItem.appendChild(newTitle);
-        newItem.appendChild(newIMG);
-        list.appendChild(newItem);
       }
     });
 }
