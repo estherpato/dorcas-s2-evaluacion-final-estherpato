@@ -26,7 +26,6 @@ function requestFilms() {
       } else {
         // bucle para entrar en el array
         var resultLength = searchResult.length;
-        console.log(resultLength);
         var numberOfSearchs = document.querySelector('.number-of-searchs');
         numberOfSearchs.innerHTML = 'Hay ' + resultLength + ' resultados para la búsqueda ' + userSearch;
         for (var i = 0; i < searchResult.length; i++) {
