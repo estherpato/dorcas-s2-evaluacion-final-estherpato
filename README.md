@@ -17,3 +17,5 @@ Los criterios de evaluación se basan en lo siguiente:
 * AJAX y APIs
 * Crear peticiones con fetch y promesas
 * Gestionar información en formato JSON
+
+Una vez realizado el feedback, el buscador de series se convirtió en buscador de actores y actrices, utilizando la misma API. Se añadió el poder inicialiar la búsqueda dándole a intro y se mejoró un poco el SASS, añadiendo variables y algunos estilos extra.
